@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <div class="toolbar-fill"></div>
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <h1>CreativeAI.</h1>
+    
+        
+       
+</head>
+<body></body>
+
+    <div class="content-parent"> 
+        <div class="about-format">
+            <h3> About: </h3>
+            <p>Ever found yourself in a creative rut? CreativeAI. is here to help you in your creative endeavours. It has learned to generate poetry and film plots, so all you need to do is write a word or more, and CreativeAI. takes care of the rest ;)
+        </div>
+        <div class="content-child">
+            <div class="title">
+                <h3>Poem Generator</h3>
+            </div>
+            <form method="post" action="#", name="poem submit">
+                <input type="text" name="poem input" id="input">
+                <br>
+                <br>
+                <input type="submit" value = 'Generate' id="input-button">
+            </form>
+                <br>
+            <div class="text-format">
+                {% if poem %}
+                    <h3>your poem: </h3>
+                    {% for line in poem %}
+                        <p>{{line}}</p>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+                
+        <div class="content-child">
+            <div class="title">
+                <h3>Plot Generator</h3>
+            </div>
+            <form method="post" action="#">
+                <input type="text" name="film input" id="input">
+                <br>
+                <br>
+                <input type="submit", name="film submit" value = 'Generate' id="input-button">
+            </form>
+                <br>
+            <div class="text-format">
+                {% if plot %}
+                    <h3>your plot : </h3>
+                        <p>{{plot}}</p>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</body>
+</html>
